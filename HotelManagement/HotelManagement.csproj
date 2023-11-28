@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3D38E4B-9A8F-4634-915B-4284878106F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HotelManagement</RootNamespace>
+    <AssemblyName>HotelManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApDungKhuyenMai.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\BcryptEncoder.cs" />
+    <Compile Include="BUS\DatPhongService.cs" />
+    <Compile Include="BUS\DatTourService.cs" />
+    <Compile Include="BUS\DichVuService.cs" />
+    <Compile Include="BUS\HoaDonService.cs" />
+    <Compile Include="BUS\KhachHangService.cs" />
+    <Compile Include="BUS\KhuyenMaiService.cs" />
+    <Compile Include="BUS\NhanVienService.cs" />
+    <Compile Include="BUS\NoiThatService.cs" />
+    <Compile Include="BUS\PhieuDanhGiaService.cs" />
+    <Compile Include="BUS\PhieuDatPhongChiTietService.cs" />
+    <Compile Include="BUS\PhieuDatPhongService.cs" />
+    <Compile Include="BUS\PhieuHuHongNoiThatService.cs" />
+    <Compile Include="BUS\PhieuSuDungDichVuChiTietService.cs" />
+    <Compile Include="BUS\PhieuSuDungDichVuService.cs" />
+    <Compile Include="BUS\PhieuSuDungThucPhamService.cs" />
+    <Compile Include="BUS\PhongService.cs" />
+    <Compile Include="BUS\TaiKhoanService.cs" />
+    <Compile Include="BUS\ThanhToanCocOnlineService.cs" />
+    <Compile Include="BUS\ThucPhamService.cs" />
+    <Compile Include="BUS\TimPhongService.cs" />
+    <Compile Include="BUS\TourDuLichService.cs" />
+    <Compile Include="CONST\KhachHangConst.cs" />
+    <Compile Include="CONST\NhanVienConst.cs" />
+    <Compile Include="CONST\PhieuDatPhongConst.cs" />
+    <Compile Include="CONST\TaiKhoanConst.cs" />
+    <Compile Include="CungCapDichVu.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DatTourRepo.cs" />
+    <Compile Include="DAO\DichVuRepo.cs" />
+    <Compile Include="DAO\HoaDonRepo.cs" />
+    <Compile Include="DAO\KhachHangRepo.cs" />
+    <Compile Include="DAO\KhuyenMaiRepo.cs" />
+    <Compile Include="DAO\NhanVienRepo.cs" />
+    <Compile Include="DAO\NoiThatRepo.cs" />
+    <Compile Include="DAO\PhieuDanhGiaRepo.cs" />
+    <Compile Include="DAO\PhieuDatPhongChiTietRepo.cs" />
+    <Compile Include="DAO\PhieuDatPhongRepo.cs" />
+    <Compile Include="DAO\PhieuHuHongNoiThatChiTietRepo.cs" />
+    <Compile Include="DAO\PhieuSuDungDichVuChiTietRepo.cs" />
+    <Compile Include="DAO\PhieuSuDungDichVuRepo.cs" />
+    <Compile Include="DAO\PhieuSuDungThucPhamRepo.cs" />
+    <Compile Include="DAO\PhongRepo.cs" />
+    <Compile Include="DAO\TaiKhoanRepo.cs" />
+    <Compile Include="DAO\ThanhVienRepo.cs" />
+    <Compile Include="DAO\ThucPhamRepo.cs" />
+    <Compile Include="DAO\TourDuLichRepo.cs" />
+    <Compile Include="DatTour.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doan.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoiTac.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyPhieuDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyPhieuDatPhong.Designer.cs">
+      <DependentUpon>fQuanLyPhieuDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Class1.cs" />
+    <Compile Include="GUI\fBuongPhongHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fBuongPhongHome.Designer.cs">
+      <DependentUpon>fBuongPhongHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fChinhSuaTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fChinhSuaTaiKhoan.Designer.cs">
+      <DependentUpon>fChinhSuaTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fCreateServiceInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fCreateServiceInvoice.Designer.cs">
+      <DependentUpon>fCreateServiceInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fCustomer.Designer.cs">
+      <DependentUpon>fCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fDangKyTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fDangKyTour.Designer.cs">
+      <DependentUpon>fDangKyTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fDichVu.Designer.cs">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fEmployee.Designer.cs">
+      <DependentUpon>fEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fGhiNhanThongTinHanhLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fGhiNhanThongTinHanhLy.Designer.cs">
+      <DependentUpon>fGhiNhanThongTinHanhLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fKeToanHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fKeToanHome.Designer.cs">
+      <DependentUpon>fKeToanHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fKhachHangHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fKhachHangHome.Designer.cs">
+      <DependentUpon>fKhachHangHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fLeTanHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLeTanHome.Designer.cs">
+      <DependentUpon>fLeTanHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fOnlinePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fOnlinePayment.Designer.cs">
+      <DependentUpon>fOnlinePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fQuanLyDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuanLyDichVu.Designer.cs">
+      <DependentUpon>fQuanLyDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fQuanLyKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuanLyKhuyenMai.Designer.cs">
+      <DependentUpon>fQuanLyKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>fQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fRoomBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fRoomBook.Designer.cs">
+      <DependentUpon>fRoomBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fRoomSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fRoomSearch.Designer.cs">
+      <DependentUpon>fRoomSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fTakeFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fTakeFeedback.Designer.cs">
+      <DependentUpon>fTakeFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fThemTaiKhoan.Designer.cs">
+      <DependentUpon>fThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\viewHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\viewHoaDon.Designer.cs">
+      <DependentUpon>viewHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HanhLy.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhuyenMai.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiPhong.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NoiThat.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuDanhGia.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuDatPhong.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuDatPhongChiTiet.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuHuHongNoiThat.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuSuDungDichVu.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuSuDungDichVuChiTiet.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuSuDungThucPham.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuVanChuyenHanhLy.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Phong.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TANN\EventAggregator.cs" />
+    <Compile Include="TANN\Shared.cs" />
+    <Compile Include="ThanhVien.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThucPham.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourDuLich.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fQuanLyPhieuDatPhong.resx">
+      <DependentUpon>fQuanLyPhieuDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fBuongPhongHome.resx">
+      <DependentUpon>fBuongPhongHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fChinhSuaTaiKhoan.resx">
+      <DependentUpon>fChinhSuaTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fCreateServiceInvoice.resx">
+      <DependentUpon>fCreateServiceInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fDangKyTour.resx">
+      <DependentUpon>fDangKyTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fDichVu.resx">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fGhiNhanThongTinHanhLy.resx">
+      <DependentUpon>fGhiNhanThongTinHanhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fKeToanHome.resx">
+      <DependentUpon>fKeToanHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fKhachHangHome.resx">
+      <DependentUpon>fKhachHangHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLeTanHome.resx">
+      <DependentUpon>fLeTanHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fOnlinePayment.resx">
+      <DependentUpon>fOnlinePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuanLyDichVu.resx">
+      <DependentUpon>fQuanLyDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuanLyKhuyenMai.resx">
+      <DependentUpon>fQuanLyKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuanLyTaiKhoan.resx">
+      <DependentUpon>fQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fRoomBook.resx">
+      <DependentUpon>fRoomBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fRoomSearch.resx">
+      <DependentUpon>fRoomSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fTakeFeedback.resx">
+      <DependentUpon>fTakeFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fThemTaiKhoan.resx">
+      <DependentUpon>fThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\viewHoaDon.resx">
+      <DependentUpon>viewHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="HotelEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HotelEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="HotelEntities.edmx.diagram">
+      <DependentUpon>HotelEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CungCapDichVu.datasource" />
+    <None Include="Properties\DataSources\DatTour.datasource" />
+    <None Include="Properties\DataSources\PhieuSuDungDichVuChiTiet.datasource" />
+    <None Include="Properties\DataSources\Phong.datasource" />
+    <None Include="Properties\DataSources\TourDuLich.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HotelEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HotelEntities.Context.cs</LastGenOutput>
+      <DependentUpon>HotelEntities.edmx</DependentUpon>
+    </Content>
+    <Content Include="HotelEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HotelEntities.edmx</DependentUpon>
+      <LastGenOutput>HotelEntities.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\R.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

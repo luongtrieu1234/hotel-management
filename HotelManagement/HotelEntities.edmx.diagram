@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+<<<<<<< HEAD
+      <Diagram DiagramId="279ddc1030ee48a594a5551f0eb72820" Name="Diagram1" ZoomLevel="50">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+=======
+      <Diagram DiagramId="279ddc1030ee48a594a5551f0eb72820" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="HotelManagementModel.DatTour" Width="1.5" PointX="5.25" PointY="15" />
+        <EntityTypeShape EntityType="HotelManagementModel.DichVu" Width="1.5" PointX="5.25" PointY="11.875" />
+        <EntityTypeShape EntityType="HotelManagementModel.Doan" Width="1.5" PointX="5.25" PointY="26.75" />
+        <EntityTypeShape EntityType="HotelManagementModel.DoiTac" Width="1.5" PointX="0.75" PointY="11.25" />
+        <EntityTypeShape EntityType="HotelManagementModel.HanhLy" Width="1.5" PointX="12.75" PointY="16.125" />
+        <EntityTypeShape EntityType="HotelManagementModel.HoaDon" Width="1.5" PointX="10.5" PointY="19.875" />
+        <EntityTypeShape EntityType="HotelManagementModel.KhachHang" Width="1.5" PointX="3" PointY="14.5" />
+        <EntityTypeShape EntityType="HotelManagementModel.KhuyenMai" Width="1.5" PointX="5.25" PointY="29.625" />
+        <EntityTypeShape EntityType="HotelManagementModel.NhanVien" Width="1.5" PointX="3" PointY="18.75" />
+        <EntityTypeShape EntityType="HotelManagementModel.NoiThat" Width="1.5" PointX="9.75" PointY="26.25" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDanhGia" Width="1.5" PointX="8.25" PointY="15.125" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDatPhong" Width="1.5" PointX="5.25" PointY="19.125" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuHuHongNoiThat" Width="1.5" PointX="10.5" PointY="23.25" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVu" Width="1.5" PointX="7.5" PointY="36" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVuChiTiet" Width="1.5" PointX="9.75" PointY="35.625" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungThucPham" Width="1.5" PointX="13.5" PointY="20.25" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuVanChuyenHanhLy" Width="1.5" PointX="10.5" PointY="15.875" />
+        <EntityTypeShape EntityType="HotelManagementModel.Phong" Width="1.5" PointX="7.5" PointY="19.875" />
+        <EntityTypeShape EntityType="HotelManagementModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="17.125" />
+        <EntityTypeShape EntityType="HotelManagementModel.ThanhVien" Width="1.5" PointX="7.5" PointY="26.75" />
+        <EntityTypeShape EntityType="HotelManagementModel.ThucPham" Width="1.5" PointX="11.25" PointY="12.25" />
+        <EntityTypeShape EntityType="HotelManagementModel.TourDuLich" Width="1.5" PointX="3" PointY="11.125" />
+>>>>>>> 95584e78e6ef75aad5149c5de89c398c8eb57828
+        <AssociationConnector Association="HotelManagementModel.fk_DatTour_makhachhang" />
+        <AssociationConnector Association="HotelManagementModel.fk_DatTour_matour" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_madichvu" />
+        <AssociationConnector Association="HotelManagementModel.fk_ThanhVien_madoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_truongdoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_TourDuLich_madoitac" />
+        <AssociationConnector Association="HotelManagementModel.fk_HanhLy_maphieuvanchuyen" />
+        <AssociationConnector Association="HotelManagementModel.fk_HoaDon_maketoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_HoaDon_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_KhachHang_taikhoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDanhGia_makhachhang" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhong_makhachhang" />
+        <AssociationConnector Association="HotelManagementModel.fk_NhanVien_taikhoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhong_nhanviencheckout" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhong_nhanvienvesinh" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuVanChuyenHanhLy_manhanvienphutrach" />
+        <AssociationConnector Association="HotelManagementModel.fk_NoiThat_maphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuHuHongNoiThat_manoithat" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDanhGia_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuHuHongNoiThat_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVu_maphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuVanChuyenHanhLy_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungThucPham_mathucpham" />
+        <AssociationConnector Association="HotelManagementModel.ApDungKhuyenMai" />
+        <AssociationConnector Association="HotelManagementModel.CungCapDichVu" />
+        <AssociationConnector Association="HotelManagementModel.PhieuDatPhongChiTiet" />
+      </Diagram>
+<<<<<<< HEAD
+        
+        
+<<<<<<< HEAD
+        
+        
+        
+        
+        
+        
+        
+        
+        <EntityTypeShape EntityType="HotelManagementModel.ApDungKhuyenMai" Width="1.5" PointX="3.3324925263097942" PointY="1.389068276336914" />
+        <EntityTypeShape EntityType="HotelManagementModel.CungCapDichVu" Width="1.5" PointX="1.7263649300329225" PointY="20.664467657294342" />
+        <EntityTypeShape EntityType="HotelManagementModel.DatTour" Width="1.5" PointX="0.74508543906038882" PointY="29.345477892712445" />
+        <EntityTypeShape EntityType="HotelManagementModel.DichVu" Width="1.5" PointX="3.3749074877122913" PointY="0.968072101924602" />
+        <EntityTypeShape EntityType="HotelManagementModel.Doan" Width="1.5" PointX="1.9221386732171006" PointY="8.15677106760292" />
+        <EntityTypeShape EntityType="HotelManagementModel.DoiTac" Width="1.5" PointX="5.503422346666186" PointY="27.120621991865626" />
+        <EntityTypeShape EntityType="HotelManagementModel.HanhLy" Width="1.5" PointX="11.341573744705679" PointY="6.5538064569951064" />
+        <EntityTypeShape EntityType="HotelManagementModel.HoaDon" Width="1.5" PointX="10.353849525728194" PointY="17.500108205480551" />
+        <EntityTypeShape EntityType="HotelManagementModel.KhachHang" Width="1.5" PointX="1.2373585855762281" PointY="14.168691701334293" />
+        <EntityTypeShape EntityType="HotelManagementModel.KhuyenMai" Width="1.5" PointX="6.0268734740218495" PointY="30.946088879809757" />
+        <EntityTypeShape EntityType="HotelManagementModel.LoaiPhong" Width="1.5" PointX="2.1901233783877094" PointY="27.984047366298757" />
+        <EntityTypeShape EntityType="HotelManagementModel.NhanVien" Width="1.5" PointX="1.8863001698098611" PointY="31.011071756021618" />
+        <EntityTypeShape EntityType="HotelManagementModel.NoiThat" Width="1.5" PointX="11.869953984334114" PointY="10.382042502230984" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDanhGia" Width="1.5" PointX="10.210765437321163" PointY="9.9114166097303" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDatPhong" Width="1.5" PointX="8.350677540689091" PointY="6.9009128394075265" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDatPhongChiTiet" Width="1.5" PointX="8.1426410675713043" PointY="6.2744992553603369" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuHuHongNoiThat" Width="1.5" PointX="1.5199508245661626" PointY="28.314937798453002" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVu" Width="1.5" PointX="1.5411330841207564" PointY="28.589460863074969" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVuChiTiet" Width="1.5" PointX="0.13825929730118219" PointY="7.56443113440854" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungThucPham" Width="1.5" PointX="6.48712945472781" PointY="12.795990577338259" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuVanChuyenHanhLy" Width="1.5" PointX="5.8972211731119177" PointY="17.52917484265248" />
+        <EntityTypeShape EntityType="HotelManagementModel.Phong" Width="1.5" PointX="6.67552869332746" PointY="19.649041110486277" />
+        <EntityTypeShape EntityType="HotelManagementModel.TaiKhoan" Width="1.5" PointX="3.1800691872742348" PointY="13.833286858086142" />
+        <EntityTypeShape EntityType="HotelManagementModel.ThanhVien" Width="1.5" PointX="11.548151392279262" PointY="28.809262527529739" />
+        <EntityTypeShape EntityType="HotelManagementModel.ThucPham" Width="1.5" PointX="9.7512237679917479" PointY="30.483923166284303" />
+        <EntityTypeShape EntityType="HotelManagementModel.TourDuLich" Width="1.5" PointX="3.9381630606661382" PointY="18.922442817558739" />
+        <AssociationConnector Association="HotelManagementModel.fk_ApDungKhuyenMai_makhuyenmai" />
+        <AssociationConnector Association="HotelManagementModel.fk_ApDungKhuyenMai_maphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_CungCapDichVu_madichvu" />
+        <AssociationConnector Association="HotelManagementModel.fk_CungCapDichVu_maloaiphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_DatTour_makhachhang" />
+        <AssociationConnector Association="HotelManagementModel.fk_DatTour_matour" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_madichvu" />
+        <AssociationConnector Association="HotelManagementModel.fk_ThanhVien_madoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_truongdoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_TourDuLich_madoitac" />
+        <AssociationConnector Association="HotelManagementModel.fk_HanhLy_maphieuvanchuyen" />
+        <AssociationConnector Association="HotelManagementModel.fk_HoaDon_maketoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_HoaDon_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_KhachHang_taikhoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDanhGia_makhachhang" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhong_makhachhang" />
+        <AssociationConnector Association="HotelManagementModel.fk_Phong_loaiphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_NhanVien_taikhoan" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhong_nhanviencheckout" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhong_nhanvienvesinh" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuVanChuyenHanhLy_manhanvienphutrach" />
+        <AssociationConnector Association="HotelManagementModel.fk_NoiThat_maphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuHuHongNoiThat_manoithat" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDanhGia_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhongChiTiet_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuHuHongNoiThat_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVu_maphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuVanChuyenHanhLy_maphieudatphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhongChiTiet_maphong" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphongchitiet" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungThucPham_mathucpham" />
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+=======
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; a52655bd379f4a22deebc24ae7fc65d482841d17
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+=======
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 2c228fe13a5bafe1b1d7cd1885943ec88ebf6556
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
